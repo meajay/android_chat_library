@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.5"
+        versionName "1.0.6"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -43,7 +43,7 @@ android {
             buildConfigField 'String', 'NCONNECT_BASE_URL', '"http://18.208.167.151:1234"'
         }
 
-        defaultPublishConfig "staging"
+        defaultPublishConfig "stagingDebug"
         publishNonDefault true
     }
 
