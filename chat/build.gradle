@@ -8,7 +8,7 @@ android {
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.6"
+        versionName "1.0.7"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -32,7 +32,7 @@ android {
     flavorDimensions "default"
     productFlavors {
         staging {
-            buildConfigField 'String', 'NCONNECT_BASE_URL', '"http://192.168.1.57:1234"'
+            buildConfigField 'String', 'NCONNECT_BASE_URL', '"http://192.168.1.57:1235"'
         }
 
         prod {

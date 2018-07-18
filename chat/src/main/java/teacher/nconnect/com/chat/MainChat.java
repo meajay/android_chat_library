@@ -38,6 +38,7 @@ import teacher.nconnect.com.chat.constants.Channel;
 import teacher.nconnect.com.chat.constants.MessageType;
 import teacher.nconnect.com.chat.db.DbChatService;
 import teacher.nconnect.com.chat.listeners.AddNewMessageListener;
+import teacher.nconnect.com.chat.listeners.AttachmentListener;
 import teacher.nconnect.com.chat.listeners.DefaultSocketListeners;
 import teacher.nconnect.com.chat.listeners.FileDbUpdateSuccess;
 import teacher.nconnect.com.chat.listeners.FileDownloadListener;
@@ -476,6 +477,76 @@ public class MainChat {
                 Timber.tag(AppConstants.CHAT_TAG).d(ex);
                 fileUploadListener.fileUploadStatus(file.getPath(), false,
                         sendingMsg);
+            }
+
+        });
+
+    }
+
+    public void uploadAttachment(Context context,
+                                 String filePath, AttachmentListener attachmentListener) {
+
+        if (filePath == null) {
+            Timber.tag(AppConstants.CHAT_TAG).d("Could not find the " +
+                    "filepath of the selected file");
+            return;
+        }
+        if (awsMobileClient == null) {
+            attachmentListener.fileUploadStatus("", false);
+            return;
+        }
+
+        TransferUtility transferUtility =
+                TransferUtility.builder()
+                        .context(context)
+                        .awsConfiguration(awsMobileClient.getConfiguration())
+                        .s3Client(new AmazonS3Client(awsMobileClient.getCredentialsProvider()))
+                        .build();
+
+        File file = new File(filePath);
+        String s3Key = file.getName() + "_" + System.currentTimeMillis();
+        Timber.tag(AppConstants.CHAT_TAG).d("somrthing %s, %s", file.getName(), file.getAbsolutePath());
+        TransferObserver uploadObserver = transferUtility.upload(AppConstants.s3FolderName +
+                "/" + s3Key, file);
+
+        Timber.tag(AppConstants.CHAT_TAG).d("Bytes Transferred: " + uploadObserver.getBytesTransferred());
+        Timber.tag(AppConstants.CHAT_TAG).d("Bytes Total: " + uploadObserver.getBytesTotal());
+        Timber.tag(AppConstants.CHAT_TAG).d("Bytes Total: " + uploadObserver.getState());
+
+
+        uploadObserver.setTransferListener(new TransferListener() {
+
+            @Override
+            public void onStateChanged(int id, TransferState state) {
+                Timber.tag(AppConstants.CHAT_TAG).d("state", state);
+
+                if (TransferState.COMPLETED == state) {
+                    attachmentListener.fileUploadStatus(s3Key, true);
+                    Timber.tag(AppConstants.CHAT_TAG).d("upload completed");
+                } else if (TransferState.FAILED == state) {
+                    attachmentListener.fileUploadStatus("", false);
+                }
+            }
+
+            @Override
+            public void onProgressChanged(int id, long bytesCurrent, long bytesTotal) {
+
+                Timber.tag(AppConstants.CHAT_TAG).d("progress %s", bytesCurrent);
+
+                float percentDonef = ((float) bytesCurrent / (float) bytesTotal) * 100;
+                int percentDone = (int) percentDonef;
+                attachmentListener.fileUploadProgress(percentDone);
+
+                Timber.tag(AppConstants.CHAT_TAG).d("ID:" + id + " bytesCurrent: "
+                        + bytesCurrent
+                        + " bytesTotal: " + bytesTotal + " " + percentDone + "%");
+            }
+
+            @Override
+            public void onError(int id, Exception ex) {
+                Timber.tag(AppConstants.CHAT_TAG).d("error %d %s", id, ex.getMessage());
+                Timber.tag(AppConstants.CHAT_TAG).d(ex);
+                attachmentListener.fileUploadStatus("", false);
             }
 
         });
