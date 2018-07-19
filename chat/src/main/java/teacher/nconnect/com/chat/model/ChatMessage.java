@@ -29,6 +29,30 @@ public class ChatMessage {
     @SerializedName("id_sender")
     private Long idSender;
 
+    @ColumnInfo(name = "sender_name")
+    @SerializedName("sender_name")
+    private String senderName;
+
+    @ColumnInfo(name = "receiver_name")
+    @SerializedName("receiver_name")
+    private String receiverName;
+
+    public String getSenderName() {
+        return senderName;
+    }
+
+    public void setSenderName(String senderName) {
+        this.senderName = senderName;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
     @ColumnInfo(name = "id_receiver")
     @SerializedName("id_receiver")
     private Long idReceiver;

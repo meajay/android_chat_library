@@ -44,6 +44,7 @@ import teacher.nconnect.com.chat.listeners.FileDbUpdateSuccess;
 import teacher.nconnect.com.chat.listeners.FileDownloadListener;
 import teacher.nconnect.com.chat.listeners.FileUploadListener;
 import teacher.nconnect.com.chat.listeners.GetChatMessageList;
+import teacher.nconnect.com.chat.listeners.GetLocalChatUserList;
 import teacher.nconnect.com.chat.listeners.NewMessagesListener;
 import teacher.nconnect.com.chat.listeners.OldMessageListener;
 import teacher.nconnect.com.chat.model.ChatJoin;
@@ -166,7 +167,10 @@ public class MainChat {
             ChatMessage receivedMsg = null;
             try {
                 receivedMsg = GsonUtils.convertToObject(data, ChatMessage.class);
-                dbService.checkAndInsertNewUser(receivedMsg.getIdSender());
+                ChatUser chatUser = new ChatUser();
+                chatUser.setIdUser(receivedMsg.getIdSender());
+                chatUser.setName(receivedMsg.getSenderName());
+                dbService.checkAndInsertNewUser(chatUser);
                 dbService.insertChatMessage(receivedMsg, true);
                 for (NewMessagesListener newMessagesListener : newMessagesListenerList) {
                     newMessagesListener.onNewMessageReceive(receivedMsg);
@@ -206,11 +210,11 @@ public class MainChat {
         }
     };
 
-    public ArrayList<ChatUser> getChatUserList() {
+    public void getChatUserList(GetLocalChatUserList localChatUserList) {
         if (dbService != null) {
-            return dbService.getChatUsersList();
+            dbService.getAllLocalChatUsers(localChatUserList);
         }
-        return null;
+
     }
 
     public void getMessageList(GetChatMessageList getChatMessageList) {
@@ -351,7 +355,10 @@ public class MainChat {
         if (chatSocket.connected()) {
             chatSocket.emit(Channel.NEW_MESSAGE.getValue(), sendingMsg.toString());
             if (isFromNewChat && !isFirstMessageSent) {
-                dbService.checkAndInsertNewUser(sendingMsg.getIdReceiver());
+                ChatUser chatUser = new ChatUser();
+                chatUser.setIdUser(sendingMsg.getIdReceiver());
+                chatUser.setName(sendingMsg.getReceiverName());
+                dbService.checkAndInsertNewUser(chatUser);
             }
             dbService.insertChatMessage(sendingMsg, false);
         } else {
@@ -583,6 +590,12 @@ public class MainChat {
 
     public void updateChatMessageReadList(ArrayList<ChatMessage> listMessage) {
         dbService.updateChatMessageReadList(listMessage);
+    }
+
+    public void insertChatUser(ChatUser chatUser) {
+        if (dbService != null) {
+            dbService.checkAndInsertNewUser(chatUser);
+        }
     }
 }
 

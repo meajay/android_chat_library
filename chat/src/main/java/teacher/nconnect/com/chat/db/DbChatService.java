@@ -1,25 +1,7 @@
 package teacher.nconnect.com.chat.db;
 
-import android.annotation.SuppressLint;
-import android.content.ContentUris;
 import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
-import android.os.Build;
-import android.os.Environment;
-import android.provider.DocumentsContract;
-import android.provider.MediaStore;
-import android.widget.Toast;
 
-import com.amazonaws.mobile.client.AWSMobileClient;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferObserver;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferState;
-import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
-import com.amazonaws.services.s3.AmazonS3Client;
-
-import java.io.File;
-import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,10 +15,11 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.schedulers.Schedulers;
 import io.socket.client.Socket;
-import teacher.nconnect.com.chat.listeners.GetChatMessageList;
-import teacher.nconnect.com.chat.model.AckMessage;
 import teacher.nconnect.com.chat.constants.AppConstants;
 import teacher.nconnect.com.chat.constants.Channel;
+import teacher.nconnect.com.chat.listeners.GetChatMessageList;
+import teacher.nconnect.com.chat.listeners.GetLocalChatUserList;
+import teacher.nconnect.com.chat.model.AckMessage;
 import teacher.nconnect.com.chat.model.ChatMessage;
 import teacher.nconnect.com.chat.model.ChatPair;
 import teacher.nconnect.com.chat.model.ChatUser;
@@ -52,25 +35,7 @@ public class DbChatService {
     private Context context;
     private CompositeDisposable subscriptions;
     private Long idSender;
-    private ArrayList<ChatUser> chatUsersList;
     private ArrayList<ChatMessage> chatMessages;
-
-    public ArrayList<ChatUser> getChatUsersList() {
-        return chatUsersList;
-    }
-
-    public void setChatUsersList(ArrayList<ChatUser> chatUsersList) {
-        this.chatUsersList = chatUsersList;
-    }
-
-    public ArrayList<ChatMessage> getChatMessages() {
-        return chatMessages;
-    }
-
-    public void setChatMessages(ArrayList<ChatMessage> chatMessages) {
-        this.chatMessages = chatMessages;
-    }
-
 
     private DbChatService(Context context, Long idSender) {
         this.context = context;
@@ -128,20 +93,22 @@ public class DbChatService {
 
                                     @Override
                                     public void onError(Throwable e) {
-
+                                        Timber.tag(AppConstants.CHAT_TAG)
+                                                .d("error inserting new user:: %s",
+                                                        e.getMessage());
+                                        getAllLocalChatUsers(idSender);
                                     }
                                 });
                     }
                 });
     }
 
-    public void checkAndInsertNewUser(Long idReceiver) {
-        ChatUser user = new ChatUser();
-        user.setName(String.valueOf(idReceiver));
-        user.setIdUser(idReceiver);
-        findOrInsertLocalUser(user);
-    }
+    public void checkAndInsertNewUser(ChatUser chatUser) {
+        if (chatUser != null) {
+            findOrInsertLocalUser(chatUser);
+        }
 
+    }
 
     public void doAfterMessageReceived(ChatMessage message, Socket chatSocket,
                                        boolean isReceivedMsg) {
@@ -290,13 +257,11 @@ public class DbChatService {
                     @Override
                     public void onSuccess(List<List<ChatMessage>> lists) {
                         for (int i = 0; i < lists.size(); i++) {
-                            //chatUserList.get(i).chatMessageList = lists.get(i);
+                            chatUserList.get(i).chatMessageList = new ArrayList<>(lists.get(i));
                         }
                         Timber.tag(AppConstants.CHAT_TAG).
                                 d("localChatUsers ten message list %s", GsonUtils
                                         .convertToJSON(chatPairList));
-
-                        setChatUsersList(new ArrayList<>(chatUserList));
                     }
 
                     @Override
@@ -358,8 +323,6 @@ public class DbChatService {
                 });
     }
 
-
-    //todo intialization
     public void getChatMessageList(Long idSender, Long idReceiver, GetChatMessageList getChatMessageList) {
 
         nChatDatabase.chatMessageDao().findMessages(idSender, idReceiver)
@@ -376,7 +339,7 @@ public class DbChatService {
                         Timber.tag(AppConstants.CHAT_TAG).d("chat message list..%s", chatMessages.size());
                         if (chatMessages.size() > 0) {
                             getChatMessageList.getChatMessages(new ArrayList<>(chatMessages));
-                           // setChatMessages(new ArrayList<>(chatMessages));
+                            // setChatMessages(new ArrayList<>(chatMessages));
                         }
                     }
 
@@ -389,5 +352,70 @@ public class DbChatService {
 
     public void updateMediaPath(ChatMessage chatMessage) {
         nChatDatabase.chatMessageDao().updateMediaPath(chatMessage.getFileLocalPath(), chatMessage.getIdMessage());
+    }
+
+    public void getAllLocalChatUsers(GetLocalChatUserList localChatUserList) {
+        nChatDatabase.chatUserDao().getChatUserList()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new SingleObserver<List<ChatUser>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        subscriptions.add(d);
+                    }
+
+                    @Override
+                    public void onSuccess(List<ChatUser> chatUsers) {
+                        Timber.tag(AppConstants.CHAT_TAG).d("localChatUsers list %s",
+                                GsonUtils.convertToJSON(chatUsers));
+                        if (chatUsers != null && chatUsers.size() > 0) {
+                            ArrayList<ChatPair> chatPairList = new ArrayList<>();
+                            for (int i = 0; i < chatUsers.size(); i++) {
+                                chatPairList.add(new ChatPair(idSender, chatUsers.get(i)
+                                        .getIdUser()));
+                                chatUsers.get(i).idSender = idSender;
+                            }
+
+                            Observable.fromIterable(chatUsers)
+                                    .flatMapSingle(chatUser ->
+                                            nChatDatabase.chatMessageDao().findLastMessageList(chatUser.idSender,
+                                                    chatUser.getIdUser()))
+                                    .toList()
+                                    .subscribeOn(Schedulers.io())
+                                    .observeOn(AndroidSchedulers.mainThread())
+                                    .subscribe(new SingleObserver<List<List<ChatMessage>>>() {
+                                        @Override
+                                        public void onSubscribe(Disposable d) {
+                                            subscriptions.add(d);
+                                        }
+
+                                        @Override
+                                        public void onSuccess(List<List<ChatMessage>> lists) {
+                                            for (int i = 0; i < lists.size(); i++) {
+                                                chatUsers.get(i).chatMessageList = new ArrayList<>(lists.get(i));
+                                            }
+                                            Timber.tag(AppConstants.CHAT_TAG).
+                                                    d("localChatUsers ten message list %s", GsonUtils
+                                                            .convertToJSON(chatPairList));
+                                            localChatUserList.getChatUserList(new ArrayList<>(chatUsers));
+                                        }
+
+                                        @Override
+                                        public void onError(Throwable e) {
+                                            Timber.tag(AppConstants.CHAT_TAG)
+                                                    .d("localChatUsers  ten message  list %s", e.getMessage());
+                                        }
+                                    });
+
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Timber.tag(AppConstants.CHAT_TAG).d("localChatUsers list error %s"
+                                , e.getMessage());
+
+                    }
+                });
     }
 }
