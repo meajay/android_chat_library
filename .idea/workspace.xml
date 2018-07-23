@@ -6,23 +6,8 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="chat socket port and version change">
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_android_sdk_auth_core_2_6_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_android_sdk_cognito_2_6_25_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_android_sdk_core_2_6_25_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_android_sdk_kms_2_6_25_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_android_sdk_mobile_client_2_6_25.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_android_sdk_s3_2_6_25_jar.xml" afterPath="" />
+    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/AddNewMessageListener.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/AddNewMessageListener.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/FileDownloadListener.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/FileDownloadListener.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatJoin.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatJoin.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/util/GsonUtils.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/utils/GsonUtils.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -143,7 +128,7 @@
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13331">
+            <state relative-caret-position="-21899">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -4763,7 +4748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531898673996</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic chat changes">
+      <created>1532329327780</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1532329327780</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4808,7 +4800,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chat socket port and version change" />
-    <option name="LAST_COMMIT_MESSAGE" value="chat socket port and version change" />
+    <MESSAGE value="basic chat changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic chat changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5220,7 +5213,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13331">
+        <state relative-caret-position="-21899">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
