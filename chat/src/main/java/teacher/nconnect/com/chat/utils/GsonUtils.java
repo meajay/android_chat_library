@@ -1,4 +1,4 @@
-package teacher.nconnect.com.chat.util;
+package teacher.nconnect.com.chat.utils;
 
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;

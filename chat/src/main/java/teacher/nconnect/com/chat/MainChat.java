@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.widget.Toast;
 
 import com.amazonaws.mobile.client.AWSMobileClient;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferListener;
@@ -50,7 +49,7 @@ import teacher.nconnect.com.chat.listeners.OldMessageListener;
 import teacher.nconnect.com.chat.model.ChatJoin;
 import teacher.nconnect.com.chat.model.ChatMessage;
 import teacher.nconnect.com.chat.model.ChatUser;
-import teacher.nconnect.com.chat.util.GsonUtils;
+import teacher.nconnect.com.chat.utils.GsonUtils;
 import timber.log.Timber;
 
 /**
@@ -351,7 +350,7 @@ public class MainChat {
 
     public void sendMessageToServer(ChatMessage sendingMsg,
                                     boolean isFromNewChat, boolean isFirstMessageSent) {
-        addNewMessageListener.onNewMessageReceive(sendingMsg);
+
         if (chatSocket.connected()) {
             chatSocket.emit(Channel.NEW_MESSAGE.getValue(), sendingMsg.toString());
             if (isFromNewChat && !isFirstMessageSent) {
@@ -359,6 +358,7 @@ public class MainChat {
                 chatUser.setIdUser(sendingMsg.getIdReceiver());
                 chatUser.setName(sendingMsg.getReceiverName());
                 dbService.checkAndInsertNewUser(chatUser);
+                addNewMessageListener.onNewMessageReceive(sendingMsg);
             }
             dbService.insertChatMessage(sendingMsg, false);
         } else {

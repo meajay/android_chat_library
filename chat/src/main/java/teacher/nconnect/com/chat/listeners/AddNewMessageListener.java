@@ -7,4 +7,5 @@ import teacher.nconnect.com.chat.model.ChatMessage;
  */
 public interface AddNewMessageListener {
     void onNewMessageReceive(ChatMessage chatMessage);
+    void onMessageSentFailed();
 }

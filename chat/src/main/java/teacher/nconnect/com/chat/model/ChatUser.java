@@ -8,22 +8,23 @@ import android.os.Parcel;
 
 import java.util.ArrayList;
 
-import teacher.nconnect.com.chat.util.GsonUtils;
+import teacher.nconnect.com.chat.utils.GsonUtils;
 
 /**
  * Created by Ajay on 25-06-2018.
+ * Receiver
  */
 @Entity(tableName = "chat_user")
 public class ChatUser {
 
     @ColumnInfo(name = "name")
-    public String name;
+    public String name;   //receiverName
 
     @PrimaryKey
     @ColumnInfo(name = "id_user")
     public Long idUser;    // idReceiver
 
-    // derived attributes
+    // derived attributes not to insert in db,using these to forward
     @Ignore
     public ArrayList<ChatMessage> chatMessageList = new ArrayList<>();
 

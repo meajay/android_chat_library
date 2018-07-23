@@ -23,7 +23,7 @@ import teacher.nconnect.com.chat.model.AckMessage;
 import teacher.nconnect.com.chat.model.ChatMessage;
 import teacher.nconnect.com.chat.model.ChatPair;
 import teacher.nconnect.com.chat.model.ChatUser;
-import teacher.nconnect.com.chat.util.GsonUtils;
+import teacher.nconnect.com.chat.utils.GsonUtils;
 import timber.log.Timber;
 
 /**

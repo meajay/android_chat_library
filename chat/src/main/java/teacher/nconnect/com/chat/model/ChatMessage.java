@@ -2,12 +2,11 @@ package teacher.nconnect.com.chat.model;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 import com.google.gson.annotations.SerializedName;
 
-import teacher.nconnect.com.chat.util.GsonUtils;
+import teacher.nconnect.com.chat.utils.GsonUtils;
 
 /**
  * Created by tarun on 6/13/18.

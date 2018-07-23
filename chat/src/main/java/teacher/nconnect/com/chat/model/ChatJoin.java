@@ -2,7 +2,7 @@ package teacher.nconnect.com.chat.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import teacher.nconnect.com.chat.util.GsonUtils;
+import teacher.nconnect.com.chat.utils.GsonUtils;
 
 /**
  * Created by Ajay on 25-06-2018.
