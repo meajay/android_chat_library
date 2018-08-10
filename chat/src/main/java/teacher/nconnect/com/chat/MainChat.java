@@ -358,9 +358,9 @@ public class MainChat {
                 chatUser.setIdUser(sendingMsg.getIdReceiver());
                 chatUser.setName(sendingMsg.getReceiverName());
                 dbService.checkAndInsertNewUser(chatUser);
-                addNewMessageListener.onNewMessageReceive(sendingMsg);
             }
             dbService.insertChatMessage(sendingMsg, false);
+            addNewMessageListener.onNewMessageReceive(sendingMsg);
         } else {
             Timber.tag(AppConstants.CHAT_TAG).d("Internet not available");
         }
