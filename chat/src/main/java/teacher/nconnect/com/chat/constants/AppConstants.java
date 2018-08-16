@@ -5,7 +5,8 @@ package teacher.nconnect.com.chat.constants;
  */
 public class AppConstants {
 
-    public static final String BASE_URL = "http://chat.nkube.gcf.education";
+    //public static final String BASE_URL = "http://chat.nkube.gcf.education";
+    public static final String BASE_URL = "http://192.168.1.64:1235";
     public static final String s3FolderName = "nconnect-chat";
     public static final String fileNamePrefix = "nchat-";
 
