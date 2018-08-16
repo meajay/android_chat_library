@@ -511,7 +511,7 @@ public class MainChat {
                         .build();
 
         File file = new File(filePath);
-        String s3Key = file.getName() + "_" + System.currentTimeMillis();
+        String s3Key = System.currentTimeMillis() + "_gcf_" + file.getName();
         Timber.tag(AppConstants.CHAT_TAG).d("somrthing %s, %s", file.getName(), file.getAbsolutePath());
         TransferObserver uploadObserver = transferUtility.upload(AppConstants.s3FolderName +
                 "/" + s3Key, file);
