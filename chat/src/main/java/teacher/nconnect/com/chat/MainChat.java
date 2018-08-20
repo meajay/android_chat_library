@@ -597,6 +597,10 @@ public class MainChat {
             dbService.checkAndInsertNewUser(chatUser);
         }
     }
+
+    public void setUrl(String url) {
+        AppConstants.BASE_URL = url;
+    }
 }
 
 
