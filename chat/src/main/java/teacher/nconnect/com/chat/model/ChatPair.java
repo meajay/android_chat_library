@@ -24,6 +24,6 @@ public class ChatPair implements Serializable {
         this.idReceiver = idReceiver;
         this.receiverName = receiverName;
         this.senderName = senderName;
-        this.senderImage = senderName;
+        this.senderImage = senderImage;
     }
 }
