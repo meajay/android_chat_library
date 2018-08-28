@@ -169,6 +169,7 @@ public class MainChat {
                 ChatUser chatUser = new ChatUser();
                 chatUser.setIdUser(receivedMsg.getIdSender());
                 chatUser.setName(receivedMsg.getSenderName());
+                chatUser.setUserImage(receivedMsg.getSenderImage());
                 dbService.checkAndInsertNewUser(chatUser);
                 dbService.insertChatMessage(receivedMsg, true);
                 for (NewMessagesListener newMessagesListener : newMessagesListenerList) {
