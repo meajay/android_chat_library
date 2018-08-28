@@ -12,6 +12,8 @@ public class ChatPair implements Serializable {
     public String receiverName = "";
     public String senderName = "";
 
+    public String senderImage = "";
+
     public ChatPair(Long idSender, Long idReceiver) {
         this.idSender = idSender;
         this.idReceiver = idReceiver;
@@ -22,5 +24,6 @@ public class ChatPair implements Serializable {
         this.idReceiver = idReceiver;
         this.receiverName = receiverName;
         this.senderName = senderName;
+        this.senderImage = senderName;
     }
 }

@@ -357,6 +357,7 @@ public class MainChat {
                 ChatUser chatUser = new ChatUser();
                 chatUser.setIdUser(sendingMsg.getIdReceiver());
                 chatUser.setName(sendingMsg.getReceiverName());
+                chatUser.setUserImage(sendingMsg.getSenderImage());
                 dbService.checkAndInsertNewUser(chatUser);
             }
             dbService.insertChatMessage(sendingMsg, false);
@@ -526,6 +527,75 @@ public class MainChat {
             @Override
             public void onStateChanged(int id, TransferState state) {
                 Timber.tag(AppConstants.CHAT_TAG).d("state", state);
+
+                if (TransferState.COMPLETED == state) {
+                    attachmentListener.fileUploadStatus(s3Key, true);
+                    Timber.tag(AppConstants.CHAT_TAG).d("upload completed");
+                } else if (TransferState.FAILED == state) {
+                    attachmentListener.fileUploadStatus("", false);
+                }
+            }
+
+            @Override
+            public void onProgressChanged(int id, long bytesCurrent, long bytesTotal) {
+
+                Timber.tag(AppConstants.CHAT_TAG).d("progress %s", bytesCurrent);
+
+                float percentDonef = ((float) bytesCurrent / (float) bytesTotal) * 100;
+                int percentDone = (int) percentDonef;
+                attachmentListener.fileUploadProgress(percentDone);
+
+                Timber.tag(AppConstants.CHAT_TAG).d("ID:" + id + " bytesCurrent: "
+                        + bytesCurrent
+                        + " bytesTotal: " + bytesTotal + " " + percentDone + "%");
+            }
+
+            @Override
+            public void onError(int id, Exception ex) {
+                Timber.tag(AppConstants.CHAT_TAG).d("error %d %s", id, ex.getMessage());
+                Timber.tag(AppConstants.CHAT_TAG).d(ex);
+                attachmentListener.fileUploadStatus("", false);
+            }
+
+        });
+
+    }
+
+    public void uploadImage(Context context,
+                            File imageFile, AttachmentListener attachmentListener) {
+
+        if (imageFile == null) {
+            Timber.tag(AppConstants.CHAT_TAG).d("Could not find the " +
+                    "filepath of the selected file");
+            return;
+        }
+        if (awsMobileClient == null) {
+            attachmentListener.fileUploadStatus("", false);
+            return;
+        }
+
+        TransferUtility transferUtility =
+                TransferUtility.builder()
+                        .context(context)
+                        .awsConfiguration(awsMobileClient.getConfiguration())
+                        .s3Client(new AmazonS3Client(awsMobileClient.getCredentialsProvider()))
+                        .build();
+
+        String s3Key = System.currentTimeMillis() + "_gcf_" + imageFile.getName();
+        Timber.tag(AppConstants.CHAT_TAG).d("somrthing %s, %s", imageFile.getName(), imageFile.getAbsolutePath());
+        TransferObserver uploadObserver = transferUtility.upload(AppConstants.s3FolderName +
+                "/" + s3Key, imageFile);
+
+        Timber.tag(AppConstants.CHAT_TAG).d("Bytes Transferred: " + uploadObserver.getBytesTransferred());
+        Timber.tag(AppConstants.CHAT_TAG).d("Bytes Total: " + uploadObserver.getBytesTotal());
+        Timber.tag(AppConstants.CHAT_TAG).d("Bytes Total: " + uploadObserver.getState());
+
+
+        uploadObserver.setTransferListener(new TransferListener() {
+
+            @Override
+            public void onStateChanged(int id, TransferState state) {
+                Timber.tag(AppConstants.CHAT_TAG).d("state %s", state);
 
                 if (TransferState.COMPLETED == state) {
                     attachmentListener.fileUploadStatus(s3Key, true);

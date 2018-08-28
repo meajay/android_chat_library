@@ -24,6 +24,17 @@ public class ChatUser {
     @ColumnInfo(name = "id_user")
     public Long idUser;    // idReceiver
 
+    public String getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
+    }
+
+    @ColumnInfo(name = "user_image")
+    public String userImage;
+
     // derived attributes not to insert in db,using these to forward
     @Ignore
     public ArrayList<ChatMessage> chatMessageList = new ArrayList<>();
@@ -38,20 +49,6 @@ public class ChatUser {
 
     public ChatUser() {
 
-    }
-
-    protected ChatUser(Parcel in) {
-        name = in.readString();
-        if (in.readByte() == 0) {
-            idUser = null;
-        } else {
-            idUser = in.readLong();
-        }
-        if (in.readByte() == 0) {
-            idSender = null;
-        } else {
-            idSender = in.readLong();
-        }
     }
 
     public String getName() {

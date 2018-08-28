@@ -32,6 +32,10 @@ public class ChatMessage {
     @SerializedName("sender_name")
     private String senderName;
 
+    @ColumnInfo(name = "sender_image")
+    @SerializedName("sender_image")
+    private String senderImage;
+
     @ColumnInfo(name = "receiver_name")
     @SerializedName("receiver_name")
     private String receiverName;
@@ -56,7 +60,7 @@ public class ChatMessage {
     @SerializedName("id_receiver")
     private Long idReceiver;
 
-    @ColumnInfo(name =  "msg")
+    @ColumnInfo(name = "msg")
     @SerializedName("msg")
     private String msg;
 
@@ -75,14 +79,15 @@ public class ChatMessage {
     @android.support.annotation.Nullable
     @ColumnInfo(name = "s3_key")
     @SerializedName("s3_key")
-    private String s3Key  = "";
+    private String s3Key = "";
 
     @android.support.annotation.Nullable
     @ColumnInfo(name = "file_local_path")
     @SerializedName("file_local_path")
-    private String fileLocalPath = "" ;
+    private String fileLocalPath = "";
 
-    public ChatMessage() {}
+    public ChatMessage() {
+    }
 
 
     public Long getIdSender() {
@@ -168,5 +173,13 @@ public class ChatMessage {
 
     public void setFileLocalPath(String fileLocalPath) {
         this.fileLocalPath = fileLocalPath;
+    }
+
+    public String getSenderImage() {
+        return senderImage;
+    }
+
+    public void setSenderImage(String senderImage) {
+        this.senderImage = senderImage;
     }
 }
