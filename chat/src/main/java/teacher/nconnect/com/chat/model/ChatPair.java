@@ -19,7 +19,7 @@ public class ChatPair implements Serializable {
         this.idReceiver = idReceiver;
     }
 
-    public ChatPair(Long idSender, Long idReceiver, String receiverName, String senderName) {
+    public ChatPair(Long idSender, Long idReceiver, String receiverName, String senderName,String senderImage) {
         this.idSender = idSender;
         this.idReceiver = idReceiver;
         this.receiverName = receiverName;
