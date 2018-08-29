@@ -9,15 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="s3 key change">
+    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="listerner null check">
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chat/build.gradle" afterPath="$PROJECT_DIR$/chat/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java" />
-      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,25 +34,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileDownloadListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/FileDownloadListener.java">
+      <file leaf-file-name="DbChatService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="266">
+              <caret line="427" column="5" lean-forward="false" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
+              <folding>
+                <element signature="e#15183#15184#0" expanded="true" />
+                <element signature="e#15251#15252#0" expanded="true" />
+                <element signature="e#19420#19421#0" expanded="true" />
+                <element signature="e#19517#19518#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChatMessageDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DbChatService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
+      <file leaf-file-name="ChatUserDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="229" column="19" lean-forward="false" selection-start-line="229" selection-start-column="19" selection-end-line="229" selection-end-column="19" />
-              <folding>
-                <element signature="e#15153#15154#0" expanded="true" />
-                <element signature="e#15221#15222#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="385">
+              <caret line="33" column="52" lean-forward="false" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,8 +72,8 @@
       <file leaf-file-name="ChatMessage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="161" column="18" lean-forward="false" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+            <state relative-caret-position="646">
+              <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1076#1077#0" expanded="true" />
@@ -89,21 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatMessageDao_Impl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/build/generated/source/apt/dev/debug/teacher/nconnect/com/chat/model/dao/ChatMessageDao_Impl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4641">
-              <caret line="289" column="11" lean-forward="false" selection-start-line="289" selection-start-column="11" selection-end-line="289" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="901">
+              <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#647#648#0" expanded="true" />
@@ -124,8 +120,8 @@
       <file leaf-file-name="ChatPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="374">
+              <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -134,24 +130,24 @@
       <file leaf-file-name="MainChat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="633" column="85" lean-forward="true" selection-start-line="633" selection-start-column="85" selection-end-line="633" selection-end-column="85" />
+            <state relative-caret-position="179">
+              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
               <folding>
                 <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
                 <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
                 <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-                <element signature="e#27430#27431#0" expanded="true" />
-                <element signature="e#27473#27474#0" expanded="true" />
+                <element signature="e#27668#27669#0" expanded="true" />
+                <element signature="e#27711#27712#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppConstants.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppConstants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+            <state relative-caret-position="306">
+              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -160,8 +156,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="85">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -170,8 +166,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="136">
+              <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -4476,20 +4472,22 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/NChatDatabase.java" />
-        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/GetLocalChatUserList.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/AddNewMessageListener.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/FileDownloadListener.java" />
-        <option value="$PROJECT_DIR$/chat/build.gradle" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java" />
+        <option value="$PROJECT_DIR$/chat/build.gradle" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
-        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1380" />
     <option name="height" value="745" />
@@ -4814,11 +4812,81 @@
       <option name="project" value="LOCAL" />
       <updated>1534768022201</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="image requirements">
+      <created>1535442407636</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1535442407636</updated>
+    </task>
+    <task id="LOCAL-00009" summary="version update">
+      <created>1535446760991</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1535446760991</updated>
+    </task>
+    <task id="LOCAL-00010" summary="change sender image">
+      <created>1535449528288</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1535449528288</updated>
+    </task>
+    <task id="LOCAL-00011" summary="build change">
+      <created>1535449652155</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1535449652155</updated>
+    </task>
+    <task id="LOCAL-00012" summary="updating chat user">
+      <created>1535458882260</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1535458882260</updated>
+    </task>
+    <task id="LOCAL-00013" summary="version update">
+      <created>1535459020053</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1535459020053</updated>
+    </task>
+    <task id="LOCAL-00014" summary="listerner null check and image fix">
+      <created>1535526907244</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1535526907244</updated>
+    </task>
+    <task id="LOCAL-00015" summary="build version upgarded">
+      <created>1535527239529</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1535527239529</updated>
+    </task>
+    <task id="LOCAL-00016" summary="version updated">
+      <created>1535528666653</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1535528666653</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chat table delete">
+      <created>1535539178251</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1535539178251</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-7" y="0" width="1380" height="745" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4835,8 +4903,8 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24583964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277311" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24621212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3327645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android WiFi ADB" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -4851,8 +4919,41 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="101" y="101" width="1164" height="536" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.73781514" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3327645" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="101" y="101" width="1164" height="536" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31764707" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24621212" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Android WiFi ADB" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -4864,7 +4965,16 @@
     <MESSAGE value="url change" />
     <MESSAGE value="setting url from outside" />
     <MESSAGE value="version change" />
-    <option name="LAST_COMMIT_MESSAGE" value="version change" />
+    <MESSAGE value="image requirements" />
+    <MESSAGE value="change sender image" />
+    <MESSAGE value="build change" />
+    <MESSAGE value="updating chat user" />
+    <MESSAGE value="version update" />
+    <MESSAGE value="listerner null check and image fix" />
+    <MESSAGE value="build version upgarded" />
+    <MESSAGE value="version updated" />
+    <MESSAGE value="chat table delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat table delete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4873,21 +4983,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="59" column="52" lean-forward="true" selection-start-line="59" selection-start-column="52" selection-end-line="59" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -4911,8 +5006,8 @@
             <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27430#27431#0" expanded="true" />
-            <element signature="e#27473#27474#0" expanded="true" />
+            <element signature="e#27668#27669#0" expanded="true" />
+            <element signature="e#27711#27712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4967,8 +5062,10 @@
         <state relative-caret-position="1088">
           <caret line="111" column="63" lean-forward="false" selection-start-line="111" selection-start-column="63" selection-end-line="111" selection-end-column="63" />
           <folding>
-            <element signature="e#15153#15154#0" expanded="true" />
-            <element signature="e#15221#15222#0" expanded="true" />
+            <element signature="e#15183#15184#0" expanded="true" />
+            <element signature="e#15251#15252#0" expanded="true" />
+            <element signature="e#19420#19421#0" expanded="true" />
+            <element signature="e#19517#19518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4996,8 +5093,8 @@
             <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27430#27431#0" expanded="true" />
-            <element signature="e#27473#27474#0" expanded="true" />
+            <element signature="e#27668#27669#0" expanded="true" />
+            <element signature="e#27711#27712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5007,8 +5104,10 @@
         <state relative-caret-position="119">
           <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding>
-            <element signature="e#15153#15154#0" expanded="true" />
-            <element signature="e#15221#15222#0" expanded="true" />
+            <element signature="e#15183#15184#0" expanded="true" />
+            <element signature="e#15251#15252#0" expanded="true" />
+            <element signature="e#19420#19421#0" expanded="true" />
+            <element signature="e#19517#19518#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5081,8 +5180,8 @@
             <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27430#27431#0" expanded="true" />
-            <element signature="e#27473#27474#0" expanded="true" />
+            <element signature="e#27668#27669#0" expanded="true" />
+            <element signature="e#27711#27712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5168,7 +5267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5196,22 +5294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/build/generated/source/apt/dev/debug/teacher/nconnect/com/chat/model/dao/ChatMessageDao_Impl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4641">
@@ -5220,21 +5302,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="229" column="19" lean-forward="false" selection-start-line="229" selection-start-column="19" selection-end-line="229" selection-end-column="19" />
-          <folding>
-            <element signature="e#15153#15154#0" expanded="true" />
-            <element signature="e#15221#15222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="901">
+          <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#647#648#0" expanded="true" />
@@ -5251,18 +5322,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="374">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="161" column="18" lean-forward="false" selection-start-line="161" selection-start-column="18" selection-end-line="161" selection-end-column="18" />
+        <state relative-caret-position="646">
+          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1076#1077#0" expanded="true" />
@@ -5283,24 +5362,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="633" column="85" lean-forward="true" selection-start-line="633" selection-start-column="85" selection-end-line="633" selection-end-column="85" />
+        <state relative-caret-position="179">
+          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
             <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27430#27431#0" expanded="true" />
-            <element signature="e#27473#27474#0" expanded="true" />
+            <element signature="e#27668#27669#0" expanded="true" />
+            <element signature="e#27711#27712#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java">
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="62" lean-forward="true" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+        <state relative-caret-position="266">
+          <caret line="427" column="5" lean-forward="false" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
+          <folding>
+            <element signature="e#15183#15184#0" expanded="true" />
+            <element signature="e#15251#15252#0" expanded="true" />
+            <element signature="e#19420#19421#0" expanded="true" />
+            <element signature="e#19517#19518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="33" column="52" lean-forward="false" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
           <folding />
         </state>
       </provider>
