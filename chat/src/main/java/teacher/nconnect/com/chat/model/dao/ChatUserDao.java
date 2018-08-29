@@ -36,4 +36,7 @@ public interface ChatUserDao {
 
     @Delete
     void delete(ChatUser chatUser);
+
+    @Query("DELETE FROM chat_user")
+    void flushTable();
 }

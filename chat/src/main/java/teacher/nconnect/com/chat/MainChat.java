@@ -676,6 +676,12 @@ public class MainChat {
     public void setUrl(String url) {
         AppConstants.BASE_URL = url;
     }
+
+    public void deleteChatTables() {
+        if (dbService != null) {
+            dbService.deleteChatTables();
+        }
+    }
 }
 
 

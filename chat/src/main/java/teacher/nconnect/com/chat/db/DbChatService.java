@@ -8,6 +8,7 @@ import java.util.List;
 import io.reactivex.Completable;
 import io.reactivex.CompletableObserver;
 import io.reactivex.Observable;
+import io.reactivex.Observer;
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
@@ -415,6 +416,39 @@ public class DbChatService {
                         Timber.tag(AppConstants.CHAT_TAG).d("localChatUsers list error %s"
                                 , e.getMessage());
 
+                    }
+                });
+    }
+
+    public Observable<Void> clearChatTables() {
+        return Completable.fromAction(() -> {
+            nChatDatabase.chatMessageDao().flushTable();
+            nChatDatabase.chatUserDao().flushTable();
+        }).toObservable();
+    }
+
+    public void deleteChatTables() {
+        clearChatTables().subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<Void>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+                        Timber.tag(AppConstants.CHAT_TAG).i("onSubscribe");
+                    }
+
+                    @Override
+                    public void onNext(Void aVoid) {
+                        Timber.tag(AppConstants.CHAT_TAG).i("onNext");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Timber.tag(AppConstants.CHAT_TAG).i("onError");
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Timber.tag(AppConstants.CHAT_TAG).i("onComplete");
                     }
                 });
     }

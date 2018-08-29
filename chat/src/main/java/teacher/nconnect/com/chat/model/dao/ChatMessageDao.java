@@ -39,4 +39,7 @@ public interface ChatMessageDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(ChatMessage... chatMessages);
+
+    @Query("DELETE FROM chat_message")
+    void flushTable();
 }
