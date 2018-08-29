@@ -179,7 +179,9 @@ public class MainChat {
                 }
             } catch (Exception e) {
                 for (NewMessagesListener newMessagesListener : newMessagesListenerList) {
-                    newMessagesListener.onNewMessageError(e.getMessage());
+                    if(newMessagesListener!=null) {
+                        newMessagesListener.onNewMessageError(e.getMessage());
+                    }
                     Timber.tag(AppConstants.CHAT_TAG).d(e);
                 }
             }
@@ -204,7 +206,9 @@ public class MainChat {
                 }
 
             } catch (Exception e) {
-                oldMessageListener.onOldMessagesError(e.getMessage());
+                if(oldMessageListener!=null) {
+                    oldMessageListener.onOldMessagesError(e.getMessage());
+                }
                 Timber.tag(AppConstants.CHAT_TAG).d(e);
             }
         }
@@ -331,7 +335,7 @@ public class MainChat {
     public void createMessage(ChatMessage sendingMsg, String filePath, String msgType,
                               boolean isFromNewChat, boolean isFirstMessage,
                               AddNewMessageListener addNewMessageListener,
-                              FileUploadListener fileUploadListener, Context context) {
+                              FileUploadListener fileUploadListener, Context context,String imageUrl) {
 
         if (fileUploadListener != null)
             this.fileUploadListener = fileUploadListener;
@@ -340,7 +344,7 @@ public class MainChat {
             this.addNewMessageListener = addNewMessageListener;
 
         if (msgType.equalsIgnoreCase(MessageType.TEXT.getValue())) {
-            sendMessageToServer(sendingMsg, isFromNewChat, isFirstMessage);
+            sendMessageToServer(sendingMsg, isFromNewChat, isFirstMessage,imageUrl);
         } else {
             File file = new File(filePath);
             sendingMsg.setS3Key(file.getName() + System.currentTimeMillis() + "");
@@ -350,7 +354,7 @@ public class MainChat {
     }
 
     public void sendMessageToServer(ChatMessage sendingMsg,
-                                    boolean isFromNewChat, boolean isFirstMessageSent) {
+                                    boolean isFromNewChat, boolean isFirstMessageSent,String imageUrl) {
 
         if (chatSocket.connected()) {
             chatSocket.emit(Channel.NEW_MESSAGE.getValue(), sendingMsg.toString());
@@ -358,7 +362,7 @@ public class MainChat {
                 ChatUser chatUser = new ChatUser();
                 chatUser.setIdUser(sendingMsg.getIdReceiver());
                 chatUser.setName(sendingMsg.getReceiverName());
-                chatUser.setUserImage(sendingMsg.getSenderImage());
+                chatUser.setUserImage(imageUrl);
                 dbService.checkAndInsertNewUser(chatUser);
             }
             dbService.insertChatMessage(sendingMsg, false);
