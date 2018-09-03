@@ -16,5 +16,5 @@ public class AppConstants {
     public static final String CHAT_TAG = "CHAT_LIBRARY";
 
     //Database version
-    public static final int VERSION = 3;
+    public static final int VERSION = 6;
 }
