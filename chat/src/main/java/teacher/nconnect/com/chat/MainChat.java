@@ -22,6 +22,7 @@ import java.io.File;
 import java.lang.reflect.Type;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import io.reactivex.Completable;
 import io.reactivex.CompletableObserver;
@@ -197,6 +198,15 @@ public class MainChat {
             try {
                 ArrayList<ChatMessage> unReadMsgList = GsonUtils
                         .convertToObject(data, listType);
+                Collections.reverse(unReadMsgList);
+                for (ChatMessage chatMessage : unReadMsgList) {
+                    Collections.reverse(unReadMsgList);
+                    ChatUser chatUser = new ChatUser();
+                    chatUser.setIdUser(chatMessage.getIdSender());
+                    chatUser.setName(chatMessage.getSenderName());
+                    chatUser.setUserImage(chatMessage.getSenderImage());
+                    dbService.checkAndInsertNewUser(chatUser);
+                }
                 Timber.tag(AppConstants.CHAT_TAG)
                         .d("message list %d", unReadMsgList.size());
                 oldMessageListener.onOldMessagesReceive();
