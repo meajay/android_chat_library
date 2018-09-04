@@ -9,7 +9,8 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="">
+    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="chat bug fix ,build version change">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/chat/build.gradle" afterPath="$PROJECT_DIR$/chat/build.gradle" />
     </list>
@@ -37,7 +38,7 @@
       <file leaf-file-name="DbChatService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="6562">
               <caret line="427" column="5" lean-forward="false" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
               <folding>
                 <element signature="e#15183#15184#0" expanded="true" />
@@ -52,7 +53,7 @@
       <file leaf-file-name="ChatMessageDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="357">
               <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
               <folding />
             </state>
@@ -62,8 +63,8 @@
       <file leaf-file-name="ChatUserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -72,10 +73,9 @@
       <file leaf-file-name="ChatMessage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1076#1077#0" expanded="true" />
                 <element signature="e#1109#1110#0" expanded="true" />
                 <element signature="e#1161#1162#0" expanded="true" />
@@ -98,7 +98,7 @@
       <file leaf-file-name="ChatUser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
+            <state relative-caret-position="697">
               <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,14 +130,13 @@
       <file leaf-file-name="MainChat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+            <state relative-caret-position="145">
+              <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
               <folding>
-                <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
                 <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
                 <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-                <element signature="e#27668#27669#0" expanded="true" />
-                <element signature="e#27711#27712#0" expanded="true" />
+                <element signature="e#28308#28309#0" expanded="true" />
+                <element signature="e#28351#28352#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,8 +145,8 @@
       <file leaf-file-name="AppConstants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="153">
+              <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -156,8 +155,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="85">
+              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -4476,13 +4475,13 @@
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/AddNewMessageListener.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/listeners/FileDownloadListener.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java" />
-        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java" />
-        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
         <option value="$PROJECT_DIR$/chat/build.gradle" />
       </list>
     </option>
@@ -4889,7 +4888,35 @@
       <option name="project" value="LOCAL" />
       <updated>1535539214130</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="version change">
+      <created>1535539315552</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1535539315552</updated>
+    </task>
+    <task id="LOCAL-00020" summary="db and build version change">
+      <created>1535979354119</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1535979354119</updated>
+    </task>
+    <task id="LOCAL-00021" summary="chat bug fix ,build versio change">
+      <created>1536043230703</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1536043230703</updated>
+    </task>
+    <task id="LOCAL-00022" summary="chat bug fix ,build version change">
+      <created>1536048199428</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1536048199428</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -4971,7 +4998,6 @@
     <MESSAGE value="s3 key change" />
     <MESSAGE value="url change" />
     <MESSAGE value="setting url from outside" />
-    <MESSAGE value="version change" />
     <MESSAGE value="image requirements" />
     <MESSAGE value="change sender image" />
     <MESSAGE value="build change" />
@@ -4982,7 +5008,11 @@
     <MESSAGE value="version updated" />
     <MESSAGE value="chat table delete" />
     <MESSAGE value="db change" />
-    <option name="LAST_COMMIT_MESSAGE" value="db change" />
+    <MESSAGE value="version change" />
+    <MESSAGE value="db and build version change" />
+    <MESSAGE value="chat bug fix ,build versio change" />
+    <MESSAGE value="chat bug fix ,build version change" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat bug fix ,build version change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5011,11 +5041,10 @@
         <state relative-caret-position="8721">
           <caret line="586" column="1" lean-forward="false" selection-start-line="586" selection-start-column="1" selection-end-line="586" selection-end-column="1" />
           <folding>
-            <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27668#27669#0" expanded="true" />
-            <element signature="e#27711#27712#0" expanded="true" />
+            <element signature="e#28308#28309#0" expanded="true" />
+            <element signature="e#28351#28352#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5098,11 +5127,10 @@
         <state relative-caret-position="8721">
           <caret line="586" column="1" lean-forward="false" selection-start-line="586" selection-start-column="1" selection-end-line="586" selection-end-column="1" />
           <folding>
-            <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27668#27669#0" expanded="true" />
-            <element signature="e#27711#27712#0" expanded="true" />
+            <element signature="e#28308#28309#0" expanded="true" />
+            <element signature="e#28351#28352#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5185,11 +5213,10 @@
         <state relative-caret-position="7854">
           <caret line="515" column="1" lean-forward="false" selection-start-line="515" selection-start-column="1" selection-end-line="515" selection-end-column="1" />
           <folding>
-            <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27668#27669#0" expanded="true" />
-            <element signature="e#27711#27712#0" expanded="true" />
+            <element signature="e#28308#28309#0" expanded="true" />
+            <element signature="e#28351#28352#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5282,7 +5309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30022">
           <caret line="1766" column="28" lean-forward="false" selection-start-line="1766" selection-start-column="28" selection-end-line="1766" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5298,7 +5324,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5306,13 +5331,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4641">
           <caret line="289" column="11" lean-forward="false" selection-start-line="289" selection-start-column="11" selection-end-line="289" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
+        <state relative-caret-position="697">
           <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -5330,14 +5354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -5346,12 +5362,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6562">
+          <caret line="427" column="5" lean-forward="false" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
+          <folding>
+            <element signature="e#15183#15184#0" expanded="true" />
+            <element signature="e#15251#15252#0" expanded="true" />
+            <element signature="e#19420#19421#0" expanded="true" />
+            <element signature="e#19517#19518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1076#1077#0" expanded="true" />
             <element signature="e#1109#1110#0" expanded="true" />
             <element signature="e#1161#1162#0" expanded="true" />
@@ -5370,61 +5430,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        <state relative-caret-position="145">
+          <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
           <folding>
-            <element signature="method#uploadWithTransferUtility#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#27668#27669#0" expanded="true" />
-            <element signature="e#27711#27712#0" expanded="true" />
+            <element signature="e#28308#28309#0" expanded="true" />
+            <element signature="e#28351#28352#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/db/DbChatService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="427" column="5" lean-forward="false" selection-start-line="427" selection-start-column="5" selection-end-line="427" selection-end-column="5" />
-          <folding>
-            <element signature="e#15183#15184#0" expanded="true" />
-            <element signature="e#15251#15252#0" expanded="true" />
-            <element signature="e#19420#19421#0" expanded="true" />
-            <element signature="e#19517#19518#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatMessageDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="28" column="49" lean-forward="false" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="85">
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
