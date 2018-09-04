@@ -114,6 +114,20 @@ public class MainChat {
         return false;
     }
 
+    public void disconnectChat() {
+        if (chatSocket != null) {
+            chatSocket.disconnect();
+            chatSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
+        }
+    }
+
+    public void connectChat() {
+        if (chatSocket != null) {
+            chatSocket.on(Socket.EVENT_CONNECT, onConnect);
+            chatSocket.connect();
+        }
+    }
+
     public boolean setUpNewMessageListener(NewMessagesListener newMessagesListener) {
         if (chatSocket != null) {
             this.newMessagesListenerList.add(newMessagesListener);
