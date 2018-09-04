@@ -180,7 +180,7 @@ public class MainChat {
                 }
             } catch (Exception e) {
                 for (NewMessagesListener newMessagesListener : newMessagesListenerList) {
-                    if(newMessagesListener!=null) {
+                    if (newMessagesListener != null) {
                         newMessagesListener.onNewMessageError(e.getMessage());
                     }
                     Timber.tag(AppConstants.CHAT_TAG).d(e);
@@ -216,7 +216,7 @@ public class MainChat {
                 }
 
             } catch (Exception e) {
-                if(oldMessageListener!=null) {
+                if (oldMessageListener != null) {
                     oldMessageListener.onOldMessagesError(e.getMessage());
                 }
                 Timber.tag(AppConstants.CHAT_TAG).d(e);
@@ -248,6 +248,8 @@ public class MainChat {
     }
 
     public void releaseResources() {
+        dbService = null;
+        awsMobileClient = null;
         chatSocket.disconnect();
         chatSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
         chatSocket.off(Socket.EVENT_CONNECT_ERROR, onConnectError);
@@ -255,6 +257,7 @@ public class MainChat {
         chatSocket.off(Channel.NEW_MESSAGE.getValue(), onNewMessage);
         chatSocket.off(Channel.OLD_MSG_LIST.getValue(), onOldMessage);
         oldMessageListener = null;
+        chatSocket = null;
         removeListeners();
     }
 
@@ -345,7 +348,7 @@ public class MainChat {
     public void createMessage(ChatMessage sendingMsg, String filePath, String msgType,
                               boolean isFromNewChat, boolean isFirstMessage,
                               AddNewMessageListener addNewMessageListener,
-                              FileUploadListener fileUploadListener, Context context,String imageUrl) {
+                              FileUploadListener fileUploadListener, Context context, String imageUrl) {
 
         if (fileUploadListener != null)
             this.fileUploadListener = fileUploadListener;
@@ -354,7 +357,7 @@ public class MainChat {
             this.addNewMessageListener = addNewMessageListener;
 
         if (msgType.equalsIgnoreCase(MessageType.TEXT.getValue())) {
-            sendMessageToServer(sendingMsg, isFromNewChat, isFirstMessage,imageUrl);
+            sendMessageToServer(sendingMsg, isFromNewChat, isFirstMessage, imageUrl);
         } else {
             File file = new File(filePath);
             sendingMsg.setS3Key(file.getName() + System.currentTimeMillis() + "");
@@ -364,7 +367,7 @@ public class MainChat {
     }
 
     public void sendMessageToServer(ChatMessage sendingMsg,
-                                    boolean isFromNewChat, boolean isFirstMessageSent,String imageUrl) {
+                                    boolean isFromNewChat, boolean isFirstMessageSent, String imageUrl) {
 
         if (chatSocket.connected()) {
             chatSocket.emit(Channel.NEW_MESSAGE.getValue(), sendingMsg.toString());
