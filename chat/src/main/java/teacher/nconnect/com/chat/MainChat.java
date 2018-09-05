@@ -116,14 +116,14 @@ public class MainChat {
 
     public void disconnectChat() {
         if (chatSocket != null) {
-            chatSocket.disconnect();
-            chatSocket.off(Socket.EVENT_DISCONNECT, onDisconnect);
+            chatSocket.emit(Channel.BACKGROUND.getValue(), new ChatJoin(idSender));
+            chatSocket.connect();
         }
     }
 
     public void connectChat() {
         if (chatSocket != null) {
-            chatSocket.on(Socket.EVENT_CONNECT, onConnect);
+            chatSocket.emit(Channel.JOIN.getValue(), new ChatJoin(idSender));
             chatSocket.connect();
         }
     }
@@ -153,6 +153,14 @@ public class MainChat {
             for (DefaultSocketListeners defaultSocketListeners : defaultSocketListenerList)
                 defaultSocketListeners.onConnectListener();
 
+            chatSocket.connect();
+        }
+    };
+
+    private Emitter.Listener onBackGround = new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            Timber.tag(AppConstants.CHAT_TAG).d("Chat in Background");
             chatSocket.connect();
         }
     };
@@ -694,9 +702,20 @@ public class MainChat {
         dbService.updateChatMessageReadList(listMessage);
     }
 
+    public void updateChatMessageRead(ChatMessage message) {
+        if (dbService != null)
+            dbService.updateChatMessageRead(message);
+    }
+
     public void insertChatUser(ChatUser chatUser) {
         if (dbService != null) {
             dbService.checkAndInsertNewUser(chatUser);
+        }
+    }
+
+    public void insertChatMessage(ChatMessage chatMessage) {
+        if (dbService != null) {
+            dbService.insertChatMessage(chatMessage, true);
         }
     }
 

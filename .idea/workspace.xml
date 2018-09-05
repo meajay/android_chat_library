@@ -9,10 +9,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="chat bug fix ,build version change">
+    <list default="true" id="a9a5412f-670a-4ce4-87e3-f61f5453ff24" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/chat/build.gradle" afterPath="$PROJECT_DIR$/chat/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
+      <change beforePath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/Channel.java" afterPath="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/Channel.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,28 +97,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChatUser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
-                <element signature="e#1363#1364#0" expanded="true" />
-                <element signature="e#1405#1406#0" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
-                <element signature="e#1539#1540#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatPair.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/ChatPair.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,13 +110,26 @@
       <file leaf-file-name="MainChat.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
+            <state relative-caret-position="45">
+              <caret line="696" column="21" lean-forward="false" selection-start-line="696" selection-start-column="21" selection-end-line="696" selection-end-column="21" />
               <folding>
                 <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
                 <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-                <element signature="e#28308#28309#0" expanded="true" />
-                <element signature="e#28351#28352#0" expanded="true" />
+                <element signature="e#29284#29285#0" expanded="true" />
+                <element signature="e#29327#29328#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Channel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/Channel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+              <folding>
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,8 +148,8 @@
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="204">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -4482,6 +4475,7 @@
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/model/dao/ChatUserDao.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/AppConstants.java" />
         <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java" />
+        <option value="$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/Channel.java" />
         <option value="$PROJECT_DIR$/chat/build.gradle" />
       </list>
     </option>
@@ -4916,7 +4910,21 @@
       <option name="project" value="LOCAL" />
       <updated>1536048199428</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="build version change">
+      <created>1536052035283</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1536052035283</updated>
+    </task>
+    <task id="LOCAL-00024" summary="disconnect and connect chat socket">
+      <created>1536073582277</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1536073582277</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -5012,7 +5020,9 @@
     <MESSAGE value="db and build version change" />
     <MESSAGE value="chat bug fix ,build versio change" />
     <MESSAGE value="chat bug fix ,build version change" />
-    <option name="LAST_COMMIT_MESSAGE" value="chat bug fix ,build version change" />
+    <MESSAGE value="build version change" />
+    <MESSAGE value="disconnect and connect chat socket" />
+    <option name="LAST_COMMIT_MESSAGE" value="disconnect and connect chat socket" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -5021,14 +5031,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -5043,8 +5045,8 @@
           <folding>
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#28308#28309#0" expanded="true" />
-            <element signature="e#28351#28352#0" expanded="true" />
+            <element signature="e#29284#29285#0" expanded="true" />
+            <element signature="e#29327#29328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5129,8 +5131,8 @@
           <folding>
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#28308#28309#0" expanded="true" />
-            <element signature="e#28351#28352#0" expanded="true" />
+            <element signature="e#29284#29285#0" expanded="true" />
+            <element signature="e#29327#29328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5215,8 +5217,8 @@
           <folding>
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#28308#28309#0" expanded="true" />
-            <element signature="e#28351#28352#0" expanded="true" />
+            <element signature="e#29284#29285#0" expanded="true" />
+            <element signature="e#29327#29328#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -5309,6 +5311,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30022">
           <caret line="1766" column="28" lean-forward="false" selection-start-line="1766" selection-start-column="28" selection-end-line="1766" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5331,6 +5334,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4641">
           <caret line="289" column="11" lean-forward="false" selection-start-line="289" selection-start-column="11" selection-end-line="289" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -5339,17 +5343,17 @@
         <state relative-caret-position="697">
           <caret line="54" column="9" lean-forward="false" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
-            <element signature="e#1363#1364#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1539#1540#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#679#680#0" expanded="false" />
+            <element signature="e#729#730#0" expanded="false" />
+            <element signature="e#771#772#0" expanded="false" />
+            <element signature="e#1334#1335#0" expanded="false" />
+            <element signature="e#1363#1364#0" expanded="false" />
+            <element signature="e#1405#1406#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1487#1488#0" expanded="false" />
+            <element signature="e#1539#1540#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -5432,21 +5436,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/MainChat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="247" column="5" lean-forward="false" selection-start-line="247" selection-start-column="5" selection-end-line="247" selection-end-column="5" />
+        <state relative-caret-position="45">
+          <caret line="696" column="21" lean-forward="false" selection-start-line="696" selection-start-column="21" selection-end-line="696" selection-end-column="21" />
           <folding>
             <element signature="method#uploadAttachment#0;class#MainChat#0" expanded="false" />
             <element signature="method#uploadImage#0;class#MainChat#0" expanded="false" />
-            <element signature="e#28308#28309#0" expanded="true" />
-            <element signature="e#28351#28352#0" expanded="true" />
+            <element signature="e#29284#29285#0" expanded="true" />
+            <element signature="e#29327#29328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/src/main/java/teacher/nconnect/com/chat/constants/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="1" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="204">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
       </provider>

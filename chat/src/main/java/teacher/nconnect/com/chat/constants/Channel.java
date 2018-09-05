@@ -7,11 +7,12 @@ public enum Channel {
     JOIN("join"),                       //EMIT to join the server
     OLD_MSG_LIST("old_message_list"),           // EMIT to get the unread messages from server
     NEW_MESSAGE("new_message"),             // EMIT AND LISTEN to send and receive a message
-    MSG_RECEIVED("message_received");   // EMIT to send saying the message is delivered
+    MSG_RECEIVED("message_received"),// EMIT to send saying the message is delivered
+    BACKGROUND("leave");
 
     private String channel;
 
-    Channel(String  channel){
+    Channel(String channel) {
         this.channel = channel;
     }
 
